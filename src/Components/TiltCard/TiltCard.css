@@ -1,0 +1,116 @@
+.tilt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  color: white;
+  transform-style: preserve-3d;
+  background-size: contain;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0,
+    inset rgb(0, 0, 0) 0 0 0 5px, inset rgb(0, 0, 0) 0 0 0 10px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.5s linear 1s !important;
+}
+
+.tilt:hover {
+  transition: all 0.2s linear !important;
+  /* animation: outlined 0.5s linear forwards; */
+  box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0,
+      inset rgb(255, 255, 255) 0 0 0 5px, 
+      inset #333 0 0 0 10px,
+      inset rgba(0, 0, 0, 0.66) 0 20px 40px 0;
+}
+
+/* @keyframes outlined {
+  from {
+    box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0,
+      inset rgba(255, 255, 255, 0.726) 0 0 0 5px, inset #333 0 0 0 10px;
+  }
+  to {
+    box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0,
+      inset rgb(255, 255, 255) 0 0 0 5px, 
+      inset #333 0 0 0 10px,
+      inset rgba(0, 0, 0, 0.66) 0 30px 60px 0;
+  }
+} */
+
+
+.inner-element {
+  height: 400px !important;
+  width: 400px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  font-size: 35px;
+  font-style: italic;
+  color: white;
+  /* transform: translateZ(60px); */
+  z-index: 1;
+  position: relative;
+}
+
+.tilt img {
+    z-index: 0;
+    position: absolute;
+    height: 350px;
+    width: 350px;
+    transform: translateZ(-60px);
+}
+
+.gradient {
+  position: absolute;
+  z-index: 0;
+  height: 385px;
+  width: 385px;
+  background: linear-gradient(
+    45deg,
+    rgba(224, 149, 44, 1) 0%,
+    rgba(125, 185, 232, 0) 100%
+  );
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.tilt:hover .gradient {
+  opacity: 1;
+}
+
+.inner-element h1 {
+  z-index: 4;
+  margin: 0;
+  text-shadow: 1px 1px 5px #000000;
+  transform: translate3d(0,3rem,0);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  padding: 0 1rem;
+  font-family: "Pacifico", cursive;
+}
+
+.tilt:hover .inner-element h1 {
+  transform: translate3d(0,0,0);
+}
+
+.inner-element p {
+  text-shadow: 2px 2px 4px #000000;
+  z-index: 4;
+  margin: 0;
+  padding: 0 1rem 1rem 1rem;
+  text-align: justify;
+  opacity: 0;
+  transform: translate3d(0,10px,0);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.tilt:hover .inner-element p {
+  opacity: 1;
+  transform: translate3d(0,0,0);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s;
+}
+
+.inner-element p {
+  font-size: 1rem;
+}

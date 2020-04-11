@@ -1,0 +1,35 @@
+.quote {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote .container {
+    width: 70vw;
+}
+
+.quote h1 {
+    font-family: 'Satisfy', cursive;
+}
+
+.quote .main {
+    font-size: 4rem;
+}
+
+/* .quote .fa-quote-left {
+    font-size: 3rem;
+    position: absolute;
+    top: -1rem;
+    left: -4rem;
+} */
+
+/* .quote .fa-quote-right {
+    font-size: 3rem;
+    position: absolute;
+    bottom: -1rem;
+    right: -4rem;
+}
+
+ */

@@ -1,0 +1,30 @@
+.hero {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero .background-container {
+  width: 100vw;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .background-container .background {
+  margin-top: 3.5rem;
+  height: 60vh;
+  width: 85vw;
+  background-image: url(../../img/hero2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
