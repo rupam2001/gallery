@@ -14,7 +14,7 @@ const Landing = () => {
                 <NavBar />
                 <Hero />
             </div>
-            <div className="section-vision">
+            <div className="section-vision animated fadeIn delay-4s">
                 <div className="shadow-heading">
                     <h1>ARTIST'S VISION</h1>
                     <h1 className='shadow-text'>ARTIST'S VISION</h1>
@@ -48,7 +48,7 @@ const Landing = () => {
                 </div>
 
             </div>
-            <div className="section-showcase show-1">
+            <div className="section-showcase show-1 animated fadeIn delay-4s">
                 <div className="shadow-heading">
                     <h1>TITTLE OF SERIES</h1>
                     <h1 className='shadow-text'>TITTLE OF SERIES</h1>
