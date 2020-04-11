@@ -46,11 +46,11 @@ const NavBar = () => {
 
     return (
 
-        <div className='navBar'>
+        <div className='navBar '>
             {width > 900 ?
                 (
                     <div>
-                        <div className="container-fluid">
+                        <div className="container-fluid animated fadeIn slow delay-3s">
                             <div className="row py-4 mx-4 mx-4 px-4">
                                 <div className="col-4 text-left d-flex align-items-end social">
                                     <div className="col-2">
@@ -74,7 +74,7 @@ const NavBar = () => {
                         <div className="spacer">
 
                         </div>
-                        <div className="container-fluid realNav" id='nav' style={{ position: navPosition, top: navTop }}>
+                        <div className="container-fluid realNav animated fadeIn slow delay-3s" id='nav' style={{ position: navPosition, top: navTop }}>
                             <div className="row py-1" style={{ padding: '0 4vw' }} >
                                 <div className="col py-1 center">
                                     HOME

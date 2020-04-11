@@ -1,7 +1,6 @@
 .navBar {
     width: 100vw;
     height: 20vh;
-    z-index: 99;
 }
 
 .navBar h1 {
@@ -11,7 +10,6 @@
 .spacer {
     width: 100vw;
     height: 3.5rem;
-    background-color: cyan;
 }
 
 .navBar .realNav {
@@ -19,7 +17,6 @@
     width: 100vw;
     font-weight: bold;
     height: 3.5rem;
-    position: absolute;
     top: 7rem;
     background-color: rgb(255, 255, 255);
 }

@@ -54,7 +54,15 @@ const Landing = () => {
                     <h1 className='shadow-text'>TITTLE OF SERIES</h1>
                 </div>
                 <div className="container pt-4 mt-4">
-                    <div className="row">
+                    <div className="row py-4">
+                        <div className="col d-flex align-items-center justify-content-center">
+                            <TiltCard/>
+                        </div>
+                        <div className="col d-flex align-items-center justify-content-center">
+                            <TiltCard/>
+                        </div>
+                    </div>
+                    <div className="row py-4">
                         <div className="col d-flex align-items-center justify-content-center">
                             <TiltCard/>
                         </div>

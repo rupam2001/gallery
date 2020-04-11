@@ -7,6 +7,10 @@
     padding: 10vh 0;
 }
 
+.section-vision span {
+    line-height: 2rem;
+}
+
 .shadow-heading {
     position: relative;
 }

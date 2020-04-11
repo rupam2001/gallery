@@ -4,6 +4,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* position: absolute;
+    left: 0;
+    bottom: 5rem;
+    z-index: 9; */
+}
+
+.quote .comma {
+    position: absolute;
+    top: -5rem;
 }
 
 .quote .container {
@@ -18,18 +27,8 @@
     font-size: 4rem;
 }
 
-/* .quote .fa-quote-left {
-    font-size: 3rem;
+.quote .name {
     position: absolute;
-    top: -1rem;
-    left: -4rem;
-} */
-
-/* .quote .fa-quote-right {
-    font-size: 3rem;
-    position: absolute;
-    bottom: -1rem;
-    right: -4rem;
+    right: 15rem;
+    bottom: 8rem;
 }
-
- */
