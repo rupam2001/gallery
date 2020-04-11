@@ -1,27 +1,20 @@
 import React, { useEffect, useState, useLayoutEffect } from 'react'
+import {
+    BrowserView,
+    MobileView,
+    isBrowser,
+    isMobile
+  } from "react-device-detect";
 
 import './NavBar.css';
-
-function useWindowSize() {
-    const [size, setSize] = useState([0, 0]);
-    useLayoutEffect(() => {
-        function updateSize() {
-            setSize([window.innerWidth, window.innerHeight]);
-        }
-        window.addEventListener('resize', updateSize);
-        updateSize();
-        return () => window.removeEventListener('resize', updateSize);
-    }, []);
-    return size;
-}
 
 const NavBar = () => {
 
     const [navPosition, setnavPosition] = useState('absolute');
     const [navTop, setnavTop] = useState('6rem');
-    const [width, height] = useWindowSize();
 
     useEffect(() => {
+        if(isBrowser){
             var remember;
             let isRemembered = false;
             window.addEventListener('scroll', () => {
@@ -42,12 +35,14 @@ const NavBar = () => {
                     setnavTop('6rem')
                 }
             });
+        }
+            
     }, []);
 
     return (
 
         <div className='navBar '>
-            {width > 900 ?
+            {isBrowser ?
                 (
                     <div>
                         <div className="container-fluid animated fadeIn slow delay-4s">

@@ -18,7 +18,7 @@ const TiltCard = ({imageUrl}) => {
             transitionSpeed={10000}
         // style={{ backgroundImage: 'url(https://picsum.photos/id/101/500/500)' }}
         >
-            <img src={'https://picsum.photos/id/101/500/500'}></img>
+            <img src={imageUrl}></img>
             {/* <div className="gradient"></div> */}
             <div className="inner-element">
                 <h1>name</h1>

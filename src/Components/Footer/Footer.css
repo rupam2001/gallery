@@ -1,0 +1,66 @@
+.footer {
+  background-color: rgb(48, 48, 48);
+  color: rgb(131, 131, 131);
+  padding: 5vh 5vw;
+}
+
+.footer .about {
+  padding-right: 8rem !important;
+}
+
+.footer .logo {
+  margin: 2rem 0;
+}
+
+.footer .contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .contact ul li {
+  padding: 1rem 0;
+}
+
+.footer .contact ul .fas,
+.footer .contact ul .fab {
+  margin-right: 1rem;
+}
+
+.footer .social .fab {
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.footer .social .fab:hover {
+    color: whitesmoke;
+    transition: all 0.2s linear;
+}
+
+.footer .social .icons .fab:first-child {
+  padding-left: 0 !important;
+}
+
+.copyright {
+    padding: 0.5rem 3rem;
+  background-color: rgb(75, 75, 75);
+  color: rgb(182, 182, 182);
+  margin: 0 !important;
+}
+
+.footer li {
+    cursor: pointer;
+}
+
+.footer li:hover{
+    color: whitesmoke;
+    transition: all 0.2s linear;
+}
+
+.footer h1 {
+    color: white;
+}
+
+.footer h3 {
+    color: rgb(224, 224, 224);
+}

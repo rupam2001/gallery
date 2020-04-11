@@ -3,8 +3,8 @@
 }
 
 .section-vision {
-    height: 100vh;
     padding: 10vh 0;
+    height: 100vh;
 }
 
 .section-vision span {
@@ -46,11 +46,19 @@
     bottom: -1rem;
     right: 0rem;
     transform: scale(1.1);
-    z-index: -2;
+    z-index: -999;
     filter: blur(10px) grayscale();
 }
 
 .section-showcase {
-    height: 100vh;
     padding: 10vh 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .section-vision .photo :last-child {
+      display: none;
+    }
+    .section-vision .photo-col {
+        justify-content: center !important;
+    }
 }
