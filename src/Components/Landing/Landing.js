@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useState} from 'react'
+import {CornerDialog, Button} from 'evergreen-ui'
 
 import {
     BrowserView,
@@ -12,6 +13,7 @@ import TiltCard from '../TiltCard/TiltCard';
 import './Landing.css';
 
 const Landing = () => {
+
     return (
         <div className='landing'>
             <Hero />

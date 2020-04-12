@@ -1,5 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { CornerDialog } from 'evergreen-ui';
+import { Link as SmoothLink, animateScroll as scroll } from "react-scroll";
 
 import {
     BrowserView,
@@ -11,6 +13,9 @@ import {
 import './Footer.css'
 
 const Footer = () => {
+
+    const [showAurinDialog, setshowAurinDialog] = useState(false);
+
     return (
         <React.Fragment>
             <div className="container-fluid footer">
@@ -55,22 +60,34 @@ const Footer = () => {
                 <div className="container-fluid copyright">
                     <div className="row">
                         <div className="col text-left">
-                            <span>
+                            <span onClick={() => { setshowAurinDialog(true) }} className="pointer">
                                 © Website developed and maintained by <span className="text-light">AURIN</span>
                             </span>
                         </div>
-                        <div className="col text-right">
+                        <div className="col text-right pointer" onClick={()=>{scroll.scrollToTop()}}>
                             GO TO TOP
                     </div>
                     </div>
                 </div>
             ) : (
-                    <div className="container-fluid" style={{backgroundColor: 'rgb(75, 75, 75)', color: 'rgb(182, 182, 182)'}}>
-                        © Website by <span className="text-light">AURIN</span>
+                    <div className="container-fluid" style={{ backgroundColor: 'rgb(75, 75, 75)', color: 'rgb(182, 182, 182)' }}>
+                        <span onClick={() => { setshowAurinDialog(true) }}>© Website by <span className="text-light">AURIN</span></span>
+                        
                     </div>
                 )
 
             }
+
+            <CornerDialog
+                title="We’d love to hear from you!"
+                isShown={showAurinDialog}
+                onCloseComplete={() => {setshowAurinDialog(false)}}
+                confirmLabel = "Visit Us"
+                onConfirm = {() => {window.open("https://www.instagram.com/aurinassam/", "_blank");}}
+            >
+                Hi, this site is creaeted by AURIN.
+                If you’re willing to provide feedback or get in touch, let’s chat.
+      </CornerDialog>
 
         </React.Fragment>
     )
