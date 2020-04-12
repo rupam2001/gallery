@@ -1,5 +1,4 @@
 import React from 'react'
-import Tilt from 'react-parallax-tilt';
 
 import {
     BrowserView,
@@ -8,20 +7,14 @@ import {
     isMobile
   } from "react-device-detect";
 
-import NavBar from '../NavBar/NavBar';
 import Hero from '../Hero/Hero';
 import TiltCard from '../TiltCard/TiltCard';
-import Footer from '../Footer/Footer';
-
 import './Landing.css';
 
 const Landing = () => {
     return (
         <div className='landing'>
-            <div className='section-hero'>
-                <NavBar />
-                <Hero />
-            </div>
+            <Hero />
             <div className="section-vision animated fadeIn">
                 <div className="shadow-heading">
                     <h1>ARTIST'S VISION</h1>
@@ -30,9 +23,9 @@ const Landing = () => {
                 <div className="container my-4 pt-4">
                     <div className="row main">
                         <div className="col-md-5 d-flex align-items-center justify-content-end photo-col">
-                            <div className="photo">
-                                <img src="https://i.picsum.photos/id/1005/300/400.jpg" alt="" className="shadow"/>
-                                    <Tilt
+                            <div className="photo shadow-lg">
+                                <img src="https://i.picsum.photos/id/1005/300/400.jpg" alt=""/>
+                                    {/* <Tilt
                                         // className="parallax-effect-glare-scale"
                                         glareEnable={false}
                                         tiltReverse={true}
@@ -41,7 +34,7 @@ const Landing = () => {
                                     // style={{ backgroundImage: 'url(https://picsum.photos/id/101/500/500)' }}
                                     >
                                         <img className="shadow-photo" src="https://i.picsum.photos/id/1005/300/400.jpg" alt="" />
-                                    </Tilt>
+                                    </Tilt> */}
                             </div>
 
                         </div>
@@ -103,7 +96,6 @@ const Landing = () => {
                     </div>
                 </div>
             </div>
-            <Footer/>
         </div>
     )
 }

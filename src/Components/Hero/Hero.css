@@ -1,6 +1,6 @@
 .hero {
   width: 100vw;
-  height: 80vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,8 +19,8 @@
 }
 
 .hero .background-container .background {
-  margin-top: 3.5rem;
-  height: 60vh;
+  margin-top: 0rem;
+  height: 70vh;
   width: 85vw;
   background-image: url(../../img/hero2.jpg);
   background-size: cover;
