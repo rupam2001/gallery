@@ -5,18 +5,22 @@ import { Link } from 'react-router-dom';
 import './Menu.css';
 import { Li } from 'evergreen-ui';
 
-const Menu = () => {
+const Menu = ({collapse}) => {
+
+    useEffect(() => {
+        //collapse nav-items on click
+    }, [])
 
     return (
 
         <div className="navmenu container-fluid">
             <div className="row">
-                <div className="col">
+                <div className="col" onClick={()=>{collapse()}}>
                     HOME
                 </div>
             </div>
             <div className="row">
-                <div className="col">
+                <div className="col" onClick={()=>{collapse()}}>
                     <SmoothLink
                         activeClass="active"
                         to="vision"
@@ -29,7 +33,7 @@ const Menu = () => {
                 </div>
             </div>
             <div className="row">
-                <div className="col">
+                <div className="col" onClick={()=>{collapse()}}>
                     <SmoothLink
                         activeClass="active"
                         to="my-work"
@@ -42,17 +46,17 @@ const Menu = () => {
                 </div>
             </div>
             <div className="row">
-                <div className="col">
+                <div className="col" onClick={()=>{collapse()}}>
                     <Link to="/contact">CONTACT</Link>
                 </div>
             </div>
             <div className="row">
-                <div className="col">
+                <div className="col" onClick={()=>{collapse()}}>
                     <Link to="/about">ABOUT</Link>
                 </div>
             </div>
             <div className="row">
-                <div className="col">
+                <div className="col" onClick={()=>{collapse()}}>
                     LOREM
                 </div>
             </div>

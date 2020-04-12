@@ -51,6 +51,17 @@ const NavBar = () => {
         //   .addEventListener("click", collapse, false);
     }, []);
 
+    const collapse = () => {
+        
+            setmenuIcon("menu")
+            sethideAnimation("--hide")
+            setTimeout(() => {
+                setshowMenu(false)
+            }, 1000)
+        console.log('workinggggggggggg');
+        
+    }
+
     return (
 
         <div className="navBar container-fluid realNav d-flex align-items-center justify-content-center shadow-down" id='nav'>
@@ -87,7 +98,7 @@ const NavBar = () => {
                 </div>
                 {showMenu ? (
                     <div className={hideAnimation}>
-                        <Menu />
+                        <Menu collapse={collapse}/>
                     </div>
                 ) : (<></>)}
             </div>
