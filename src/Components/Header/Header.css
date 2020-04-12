@@ -1,6 +1,8 @@
 .header {
     width: 100vw;
     height: 15vh;
+    background-color: white;
+    z-index: 99;
 }
 
 .header h1 {

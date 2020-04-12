@@ -1,0 +1,22 @@
+.about .banner {
+    color: rgb(0, 0, 0);
+  font-weight: 700;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url(https://picsum.photos/id/293/1000/1000);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.about .container {
+    padding: 0 6rem;
+}
+
+.about p {
+    color: rgb(0, 0, 0);
+}

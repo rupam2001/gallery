@@ -34,7 +34,7 @@ const TiltCard = ({imageUrl}) => {
             tiltMaxAngleX={('Max tilt - x axis', 15)}
             tiltMaxAngleY={('Max tilt - y axis', 15)}
             transitionSpeed={10000}
-        // style={{ backgroundImage: 'url(https://picsum.photos/id/101/500/500)' }}
+        style={{ backgroundColor: 'white' }}
         >
             <img src={imageUrl}></img>
             {isBrowser?(

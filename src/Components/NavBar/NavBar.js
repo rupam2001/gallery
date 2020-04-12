@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import Menu from './Menu/Menu';
 import './NavBar.css';
+import { Li } from 'evergreen-ui';
 
 const NavBar = () => {
 
@@ -52,14 +53,14 @@ const NavBar = () => {
     }, []);
 
     const collapse = () => {
-        
-            setmenuIcon("menu")
-            sethideAnimation("--hide")
-            setTimeout(() => {
-                setshowMenu(false)
-            }, 1000)
+
+        setmenuIcon("menu")
+        sethideAnimation("--hide")
+        setTimeout(() => {
+            setshowMenu(false)
+        }, 1000)
         console.log('workinggggggggggg');
-        
+
     }
 
     return (
@@ -98,7 +99,7 @@ const NavBar = () => {
                 </div>
                 {showMenu ? (
                     <div className={hideAnimation}>
-                        <Menu collapse={collapse}/>
+                        <Menu collapse={collapse} />
                     </div>
                 ) : (<></>)}
             </div>
@@ -110,39 +111,47 @@ const NavBar = () => {
                         </Link>
                     </div>
                     <div className="col py-1 center">
-                        <SmoothLink
-                            activeClass="active"
-                            to="vision"
-                            spy={true}
-                            smooth={true}
-                            offset={0}
-                            duration={500}
-                        >
-                            <span className="pointer">VISION</span>
-                        </SmoothLink>
+                        {window.location.pathname === "/" ? (
+                            <SmoothLink
+                                activeClass="active"
+                                to="vision"
+                                spy={true}
+                                smooth={true}
+                                offset={0}
+                                duration={500}
+                            >
+                                <span className="pointer">VISION</span>
+                            </SmoothLink>
+                        ) : (
+                                <a href="/#vision"><span className="pointer">VISION</span></a>
+                            )}
                     </div>
                     <div className="col py-1 center">
-                        <SmoothLink
-                            activeClass="active"
-                            to="my-work"
-                            spy={true}
-                            smooth={true}
-                            offset={0}
-                            duration={500}
-                        >
-                            <span className="pointer">MY WORK</span>
-
-                        </SmoothLink>
+                        {window.location.pathname === "/" ? (
+                            <SmoothLink
+                                activeClass="active"
+                                to="my-work"
+                                spy={true}
+                                smooth={true}
+                                offset={0}
+                                duration={500}
+                            >
+                                <span className="pointer">MY WORK</span>
+                            </SmoothLink>
+                        ) : (
+                                <a href="/#my-work"><span className="pointer">MY WORK</span></a>
+                            )}
                     </div>
                     <div className="col py-1 center">
                         <Link to="/contact">
-
                             <span className="pointer">CONTACT</span>
                         </Link>
 
                     </div>
                     <div className="col py-1 center">
-                        <span className="pointer">ABOUT</span>
+                        <Link to="/about">
+                            <span className="pointer">ABOUT</span>
+                        </Link>
 
                     </div>
                     <div className="col py-1 center" style={{ paddingRight: '0' }}>

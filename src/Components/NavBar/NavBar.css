@@ -97,7 +97,7 @@
 
 /* animations */
 
-.--hide {
+ .--hide {
   animation: cover 1s ease-in-out forwards;
   z-index: -999;
 }
