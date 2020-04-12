@@ -6,7 +6,7 @@ const Menu = () => {
 
     return (
 
-        <div className="menu container-fluid">
+        <div className="navmenu container-fluid">
             <div className="row">
                 <div className="col">
                     HOME

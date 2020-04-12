@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useLayoutEffect } from 'react'
 
+import Menu from './Menu/Menu';
 import './NavBar.css';
 
 const NavBar = () => {
@@ -7,7 +8,10 @@ const NavBar = () => {
     const [navPosition, setnavPosition] = useState('absolute');
     const [navTop, setnavTop] = useState('6rem');
     const [menuIcon, setmenuIcon] = useState("menu");
-    const [showMenu, setshowMenu] = useState(true);
+    const [hideAnimation, sethideAnimation] = useState("")
+    const [showMenu, setshowMenu] = useState(false)
+
+
 
     // nav utilities
     // useEffect(() => {
@@ -16,7 +20,7 @@ const NavBar = () => {
     //     let toggler = document.getElementById("toggler");
     //     let elements = document.getElementsByClassName("nav-item");
     //     let prevScrollpos = window.pageYOffset;
-    
+
     //     const hideNav = () => {
     //       nvbr.classList.toggle("hide", true);
     //     };
@@ -27,7 +31,7 @@ const NavBar = () => {
     //       // toggler.click();
     //       document.getElementById("navbarMenu").classList.toggle("show", false);
     //     };
-    
+
     //     //hide on scroll
     //     window.onscroll = () => {
     //       var currentScrollPos = window.pageYOffset;
@@ -44,12 +48,12 @@ const NavBar = () => {
     //       }
     //       prevScrollpos = currentScrollPos;
     //     };
-    
+
     //     //collapse nav-items on click
     //     for (var i = 0; i < elements.length; i++) {
     //       elements[i].addEventListener("click", collapse, false);
     //     }
-    
+
     //     document
     //       .getElementById("cart-icon")
     //       .addEventListener("click", collapse, false);
@@ -57,19 +61,27 @@ const NavBar = () => {
 
     return (
 
-        <div className="navBar container-fluid realNav d-flex align-items-center justify-content-center" id='nav'>
+        <div className="navBar container-fluid realNav d-flex align-items-center justify-content-center
+        
+        " id='nav'>
             {/* animated fadeIn slow delay-4s */}
-            <div className="mobile container-fluid d-flex align-items-center justify-content-center">
+            <div className="mobile container-fluid">
                 <div className="row d-flex align-items-center justify-content-center">
                     <div className="col-2 d-flex align-items-center justify-content-center">
-                        <div className={menuIcon} 
-                        onClick={()=> {
-                            if(menuIcon === "menu") {
-                                setmenuIcon("menu change")
-                            } else {
-                                setmenuIcon("menu")
-                            }
-                        }}
+                        <div className={menuIcon}
+                            onClick={() => {
+                                if (menuIcon === "menu") {
+                                    setmenuIcon("menu change")
+                                    sethideAnimation("")
+                                    setshowMenu(true)
+                                } else {
+                                    setmenuIcon("menu")
+                                    sethideAnimation("--hide")
+                                    setTimeout(()=> {
+                                        setshowMenu(false)
+                                    },1000)
+                                }
+                            }}
                         >
                             <div className="bar1" />
                             <div className="bar2" />
@@ -83,6 +95,11 @@ const NavBar = () => {
                         3
                     </div>
                 </div>
+                {showMenu ? (
+                    <div className={hideAnimation}>
+                        <Menu />
+                    </div>
+                ) : (<></>)}
             </div>
             <div className="browser">
                 <div className="row py-1" style={{ padding: '0 4vw' }} >

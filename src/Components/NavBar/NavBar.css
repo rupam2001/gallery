@@ -19,6 +19,7 @@
 
   .mobile .row {
     width: 100vw;
+    height: 10vh;
   }
 
   .navBar .logo {
@@ -84,5 +85,17 @@
 
 .change .bar3 {
   transform: rotate(45deg) translate(-10px,-3px);
+}
+
+/* animations */
+
+.--hide {
+  animation: cover 1s ease-in-out forwards;
+  z-index: -999;
+}
+
+@keyframes cover {
+  from { clip-path: circle(300%);}
+    to {clip-path: circle(0% at 50% -10vh);}
 }
 

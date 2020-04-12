@@ -1,9 +1,27 @@
-.menu {
+.navmenu {
     background-color: black;
     color: wheat;
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 10vh;
     right: 0;
     left: 0;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    overflow: hidden;
+    /* transition: all 1s linear; */
+    animation: reveal 1s ease-in-out forwards;
 }
+
+@keyframes reveal {
+    from {clip-path: circle(0% at 50% -20vh);}
+    to { clip-path: circle(100%);}
+  }
+
+.navmenu .row {
+    padding-bottom: 1.6rem;
+}
+
