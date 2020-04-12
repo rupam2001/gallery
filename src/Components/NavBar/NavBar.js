@@ -6,36 +6,85 @@ const NavBar = () => {
 
     const [navPosition, setnavPosition] = useState('absolute');
     const [navTop, setnavTop] = useState('6rem');
+    const [menuIcon, setmenuIcon] = useState("menu");
+    const [showMenu, setshowMenu] = useState(true);
 
+    // nav utilities
     // useEffect(() => {
-    //     if (isBrowser) {
-    //         var remember;
-    //         let isRemembered = false;
-    //         window.addEventListener('scroll', () => {
-    //             const scrolled = window.scrollY;
-    //             let nav = document.getElementById('nav');
-    //             let distanceToTop = nav.getBoundingClientRect().top;
-    //             if (distanceToTop === 0 && !isRemembered) {
-    //                 remember = scrolled;
-    //                 isRemembered = true;
-    //                 console.log('GOT IT', scrolled);
-    //             }
-    //             if (distanceToTop <= 0) {
-    //                 setnavPosition('fixed')
-    //                 setnavTop('0')
-    //             }
-    //             if (scrolled <= remember) {
-    //                 setnavPosition('absolute')
-    //                 setnavTop('6rem')
-    //             }
-    //         });
+    //     //Caching
+    //     let nvbr = document.getElementById("nvbr");
+    //     let toggler = document.getElementById("toggler");
+    //     let elements = document.getElementsByClassName("nav-item");
+    //     let prevScrollpos = window.pageYOffset;
+    
+    //     const hideNav = () => {
+    //       nvbr.classList.toggle("hide", true);
+    //     };
+    //     const showNav = () => {
+    //       nvbr.classList.toggle("hide", false);
+    //     };
+    //     const collapse = () => {
+    //       // toggler.click();
+    //       document.getElementById("navbarMenu").classList.toggle("show", false);
+    //     };
+    
+    //     //hide on scroll
+    //     window.onscroll = () => {
+    //       var currentScrollPos = window.pageYOffset;
+    //       if (prevScrollpos > currentScrollPos) {
+    //         showNav();
+    //       } else {
+    //         hideNav();
+    //       }
+    //       if (currentScrollPos < 10) {
+    //         showNav();
+    //       }
+    //       if (!toggler.classList.contains("collapsed")) {
+    //         collapse();
+    //       }
+    //       prevScrollpos = currentScrollPos;
+    //     };
+    
+    //     //collapse nav-items on click
+    //     for (var i = 0; i < elements.length; i++) {
+    //       elements[i].addEventListener("click", collapse, false);
     //     }
-
-    // }, []);
+    
+    //     document
+    //       .getElementById("cart-icon")
+    //       .addEventListener("click", collapse, false);
+    //   }, []);
 
     return (
 
-            <div className="navBar container-fluid realNav animated fadeIn slow delay-4s" id='nav'>
+        <div className="navBar container-fluid realNav d-flex align-items-center justify-content-center" id='nav'>
+            {/* animated fadeIn slow delay-4s */}
+            <div className="mobile container-fluid d-flex align-items-center justify-content-center">
+                <div className="row d-flex align-items-center justify-content-center">
+                    <div className="col-2 d-flex align-items-center justify-content-center">
+                        <div className={menuIcon} 
+                        onClick={()=> {
+                            if(menuIcon === "menu") {
+                                setmenuIcon("menu change")
+                            } else {
+                                setmenuIcon("menu")
+                            }
+                        }}
+                        >
+                            <div className="bar1" />
+                            <div className="bar2" />
+                            <div className="bar3" />
+                        </div>
+                    </div>
+                    <div className="col d-flex align-items-center justify-content-center">
+                        <h2 className="logo">NITYA SONI</h2>
+                    </div>
+                    <div className="col-2 d-flex align-items-center justify-content-center">
+                        3
+                    </div>
+                </div>
+            </div>
+            <div className="browser">
                 <div className="row py-1" style={{ padding: '0 4vw' }} >
                     <div className="col py-1 center">
                         HOME
@@ -57,6 +106,8 @@ const NavBar = () => {
                     </div>
                 </div>
             </div>
+
+        </div>
     )
 }
 

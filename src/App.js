@@ -16,6 +16,7 @@ function App() {
       <NavBar/>
      <Landing/>
      <Footer/>
+     
     </div>
   );
 }
