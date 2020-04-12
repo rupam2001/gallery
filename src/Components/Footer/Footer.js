@@ -1,6 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+import {
+    BrowserView,
+    MobileView,
+    isBrowser,
+    isMobile
+} from "react-device-detect";
+
 import './Footer.css'
 
 const Footer = () => {
@@ -28,7 +35,6 @@ const Footer = () => {
                                     <li><i className="fas fa-envelope" />Email: hello@domain.com</li>
                                     <li><i className="fab fa-skype" />Skype: you_online</li>
                                 </div>
-
                             </ul>
 
                         </div>
@@ -45,18 +51,27 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="container-fluid copyright">
-                <div className="row">
-                    <div className="col text-left">
-                        <span>
-                            © Website developed and maintained by <span className="text-light">AURIN</span>
-                        </span>
+            {isBrowser ? (
+                <div className="container-fluid copyright">
+                    <div className="row">
+                        <div className="col text-left">
+                            <span>
+                                © Website developed and maintained by <span className="text-light">AURIN</span>
+                            </span>
+                        </div>
+                        <div className="col text-right">
+                            GO TO TOP
                     </div>
-                    <div className="col text-right">
-                        GO TO TOP
                     </div>
                 </div>
-            </div>
+            ) : (
+                    <div className="container-fluid" style={{backgroundColor: 'rgb(75, 75, 75)', color: 'rgb(182, 182, 182)'}}>
+                        © Website by <span className="text-light">AURIN</span>
+                    </div>
+                )
+
+            }
+
         </React.Fragment>
     )
 }

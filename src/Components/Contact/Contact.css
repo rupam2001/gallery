@@ -1,0 +1,87 @@
+.contact-tab {
+  padding: 3rem 0;
+}
+
+.contact-tab::before{
+    content: "";
+  position: absolute;
+  top: 25vh;
+  left: -10px;
+  right: -10px;
+  width: 100vw;
+  height: 120vh;
+  background-image: url(https://picsum.photos/id/293/1920/1080);
+  filter: blur(5px);
+  background-repeat: no-repeat;
+  z-index: -5;
+}
+
+.contact-tab .row {
+  width: 100%;
+  /* height: 90vh; */
+  box-shadow: 0 0px 20px -5px black;
+}
+
+.contact-tab .details,
+.contact-tab .form-col {
+    padding: 5rem 1rem;
+}
+
+.contact-tab ul {
+  list-style: none;
+  padding: 0;
+  font-weight: bold;
+}
+.contact-tab ul li {
+  padding: 1rem 0;
+  text-align: justify;
+}
+
+.contact-tab ul .fas,
+.contact-tab ul .fab {
+  margin-right: 1rem;
+}
+
+.contact-tab .details {
+    padding-left: 3rem;
+}
+
+.contact-tab .details::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(https://picsum.photos/id/293/800/800);
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.contact-tab .form-col{
+    background-color: white;
+}
+
+.contact-tab .form {
+    width: 90%;
+}
+
+.contact-tab .form textarea{
+    height: 200px;
+}
+
+@media only screen and (max-width: 800px) {
+    .contact-tab::before{
+        display: none;
+    }
+    .contact-tab{
+        padding-bottom: 0;
+    }
+
+}
+
+.contact-tab .btn {
+    width: 10rem;
+    height: 3rem;
+    font-weight: bold;
+}

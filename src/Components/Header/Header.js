@@ -42,7 +42,7 @@ const Header = () => {
     return (
 
         <div className='header'>
-            <div className="container-fluid animated fadeIn slow delay-4s">
+            <div className="container-fluid">
                 <div className="row py-4 mx-4 mx-4 px-4">
                     <div className="col-4 text-left d-flex align-items-end social">
                         <div className="col-2">

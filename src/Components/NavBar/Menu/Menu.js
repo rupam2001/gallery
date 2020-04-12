@@ -1,6 +1,9 @@
 import React, { useEffect, useState, useLayoutEffect } from 'react'
+import { Link as SmoothLink, animateScroll as scroll } from "react-scroll";
+import { Link } from 'react-router-dom';
 
 import './Menu.css';
+import { Li } from 'evergreen-ui';
 
 const Menu = () => {
 
@@ -14,22 +17,38 @@ const Menu = () => {
             </div>
             <div className="row">
                 <div className="col">
-                    VISION
+                    <SmoothLink
+                        activeClass="active"
+                        to="vision"
+                        spy={true}
+                        smooth={true}
+                        offset={0}
+                        duration={500}
+                    >VISION</SmoothLink>
+
                 </div>
             </div>
             <div className="row">
                 <div className="col">
-                    MY WORK
+                    <SmoothLink
+                        activeClass="active"
+                        to="my-work"
+                        spy={true}
+                        smooth={true}
+                        offset={0}
+                        duration={500}
+                    >MY WORK</SmoothLink>
+
                 </div>
             </div>
             <div className="row">
                 <div className="col">
-                    CONTACT
+                    <Link to="/contact">CONTACT</Link>
                 </div>
             </div>
             <div className="row">
                 <div className="col">
-                    ABOUT
+                    <Link to="/about">ABOUT</Link>
                 </div>
             </div>
             <div className="row">

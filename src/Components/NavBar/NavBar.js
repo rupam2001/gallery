@@ -1,71 +1,61 @@
-import React, { useEffect, useState, useLayoutEffect } from 'react'
+import React, { useEffect, useState, useLayoutEffect } from 'react';
+import { Link as SmoothLink, animateScroll as scroll } from "react-scroll";
+import { Link } from 'react-router-dom';
 
 import Menu from './Menu/Menu';
 import './NavBar.css';
 
 const NavBar = () => {
 
-    const [navPosition, setnavPosition] = useState('absolute');
-    const [navTop, setnavTop] = useState('6rem');
     const [menuIcon, setmenuIcon] = useState("menu");
     const [hideAnimation, sethideAnimation] = useState("")
     const [showMenu, setshowMenu] = useState(false)
 
-
+    const scrollToTop = () => {
+        scroll.scrollToTop();
+    };
 
     // nav utilities
-    // useEffect(() => {
-    //     //Caching
-    //     let nvbr = document.getElementById("nvbr");
-    //     let toggler = document.getElementById("toggler");
-    //     let elements = document.getElementsByClassName("nav-item");
-    //     let prevScrollpos = window.pageYOffset;
+    useEffect(() => {
+        //Caching\
 
-    //     const hideNav = () => {
-    //       nvbr.classList.toggle("hide", true);
-    //     };
-    //     const showNav = () => {
-    //       nvbr.classList.toggle("hide", false);
-    //     };
-    //     const collapse = () => {
-    //       // toggler.click();
-    //       document.getElementById("navbarMenu").classList.toggle("show", false);
-    //     };
+        // const hideNav = () => {
+        //     nvbr.classList.toggle("hide", true);
+        // };
+        // const showNav = () => {
+        //     nvbr.classList.toggle("hide", false);
+        // };
 
-    //     //hide on scroll
-    //     window.onscroll = () => {
-    //       var currentScrollPos = window.pageYOffset;
-    //       if (prevScrollpos > currentScrollPos) {
-    //         showNav();
-    //       } else {
-    //         hideNav();
-    //       }
-    //       if (currentScrollPos < 10) {
-    //         showNav();
-    //       }
-    //       if (!toggler.classList.contains("collapsed")) {
-    //         collapse();
-    //       }
-    //       prevScrollpos = currentScrollPos;
-    //     };
+        //hide on scroll
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("nvbr").style.top = "0";
+            } else {
+                document.getElementById("nvbr").style.top = "-10vh";
+            }
+            if (currentScrollPos < 10) {
+                document.getElementById("nvbr").style.top = "0";
+            }
+            prevScrollpos = currentScrollPos;
+        }
 
-    //     //collapse nav-items on click
-    //     for (var i = 0; i < elements.length; i++) {
-    //       elements[i].addEventListener("click", collapse, false);
-    //     }
+        //collapse nav-items on click
+        // for (var i = 0; i < elements.length; i++) {
+        //   elements[i].addEventListener("click", collapse, false);
+        // }
 
-    //     document
-    //       .getElementById("cart-icon")
-    //       .addEventListener("click", collapse, false);
-    //   }, []);
+        // document
+        //   .getElementById("cart-icon")
+        //   .addEventListener("click", collapse, false);
+    }, []);
 
     return (
 
-        <div className="navBar container-fluid realNav d-flex align-items-center justify-content-center
-        
-        " id='nav'>
+        <div className="navBar container-fluid realNav d-flex align-items-center justify-content-center shadow-down" id='nav'>
             {/* animated fadeIn slow delay-4s */}
-            <div className="mobile container-fluid">
+            <div className="mobile container-fluid" id="nvbr">
                 <div className="row d-flex align-items-center justify-content-center">
                     <div className="col-2 d-flex align-items-center justify-content-center">
                         <div className={menuIcon}
@@ -77,9 +67,9 @@ const NavBar = () => {
                                 } else {
                                     setmenuIcon("menu")
                                     sethideAnimation("--hide")
-                                    setTimeout(()=> {
+                                    setTimeout(() => {
                                         setshowMenu(false)
-                                    },1000)
+                                    }, 1000)
                                 }
                             }}
                         >
@@ -92,7 +82,7 @@ const NavBar = () => {
                         <h2 className="logo">NITYA SONI</h2>
                     </div>
                     <div className="col-2 d-flex align-items-center justify-content-center">
-                        3
+                        <i class="fab fa-instagram" />
                     </div>
                 </div>
                 {showMenu ? (
@@ -102,24 +92,51 @@ const NavBar = () => {
                 ) : (<></>)}
             </div>
             <div className="browser">
-                <div className="row py-1" style={{ padding: '0 4vw' }} >
-                    <div className="col py-1 center">
-                        HOME
+                <div className="row py-1" style={{ width: '100vw', backgroundColor: 'white' }}>
+                    <div className="col py-1 center" style={{ paddingLeft: '0' }}>
+                        <Link to="/">
+                            <span onClick={scrollToTop} className="pointer">HOME</span>
+                        </Link>
                     </div>
                     <div className="col py-1 center">
-                        VISSION
+                        <SmoothLink
+                            activeClass="active"
+                            to="vision"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={500}
+                        >
+                            <span className="pointer">VISION</span>
+                        </SmoothLink>
                     </div>
                     <div className="col py-1 center">
-                        MY WORK
+                        <SmoothLink
+                            activeClass="active"
+                            to="my-work"
+                            spy={true}
+                            smooth={true}
+                            offset={0}
+                            duration={500}
+                        >
+                            <span className="pointer">MY WORK</span>
+
+                        </SmoothLink>
                     </div>
                     <div className="col py-1 center">
-                        CONTACT
+                        <Link to="/contact">
+
+                            <span className="pointer">CONTACT</span>
+                        </Link>
+
                     </div>
                     <div className="col py-1 center">
-                        ABOUT
+                        <span className="pointer">ABOUT</span>
+
                     </div>
-                    <div className="col py-1 center">
-                        LOREM
+                    <div className="col py-1 center" style={{ paddingRight: '0' }}>
+                        <span className="pointer">LOREM</span>
+
                     </div>
                 </div>
             </div>

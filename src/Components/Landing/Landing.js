@@ -15,7 +15,7 @@ const Landing = () => {
     return (
         <div className='landing'>
             <Hero />
-            <div className="section-vision animated fadeIn">
+            <div className="section-vision animated fadeIn" id="vision">
                 <div className="shadow-heading">
                     <h1>ARTIST'S VISION</h1>
                     <h1 className='shadow-text'>ARTIST'S VISION</h1>
@@ -48,25 +48,25 @@ const Landing = () => {
                 </div>
 
             </div>
-            <div className="section-showcase show-1">
+            <div className="section-showcase show-1" id="my-work">
                 <div className="shadow-heading">
                     <h1>TITTLE OF SERIES</h1>
                     <h1 className='shadow-text'>TITTLE OF SERIES</h1>
                 </div>
-                <div className="container pt-4 mt-4">
-                    <div className="row py-4">
-                        <div className="col d-flex align-items-center justify-content-center">
+                <div className="container">
+                    <div className="row">
+                        <div className="col d-flex align-items-center justify-content-center i1">
                             <TiltCard imageUrl="https://i.picsum.photos/id/101/500/500.jpg"/>
                         </div>
-                        <div className="col d-flex align-items-center justify-content-center">
+                        <div className="col d-flex align-items-center justify-content-center i2">
                             <TiltCard imageUrl="https://i.picsum.photos/id/143/500/500.jpg"/>
                         </div>
                     </div>
-                    <div className="row py-4">
-                        <div className="col d-flex align-items-center justify-content-center">
+                    <div className="row">
+                        <div className="col d-flex align-items-start justify-content-center i3">
                             <TiltCard imageUrl="https://i.picsum.photos/id/300/500/500.jpg"/>
                         </div>
-                        <div className="col d-flex align-items-center justify-content-center">
+                        <div className="col d-flex align-items-center justify-content-center i4">
                             <TiltCard imageUrl="https://i.picsum.photos/id/104/500/500.jpg"/>
                         </div>
                     </div>
@@ -77,20 +77,20 @@ const Landing = () => {
                     <h1>TITTLE OF SERIES</h1>
                     <h1 className='shadow-text'>TITTLE OF SERIES</h1>
                 </div>
-                <div className="container pt-4 mt-4">
-                    <div className="row py-4">
-                        <div className="col d-flex align-items-center justify-content-center">
+                <div className="container">
+                    <div className="row">
+                        <div className="col d-flex align-items-center justify-content-center i1">
                             <TiltCard imageUrl="https://i.picsum.photos/id/101/500/500.jpg"/>
                         </div>
-                        <div className="col d-flex align-items-center justify-content-center">
+                        <div className="col d-flex align-items-center justify-content-center i2">
                             <TiltCard imageUrl="https://i.picsum.photos/id/143/500/500.jpg"/>
                         </div>
                     </div>
-                    <div className="row py-4">
-                        <div className="col d-flex align-items-center justify-content-center">
+                    <div className="row">
+                        <div className="col d-flex align-items-start justify-content-center i3">
                             <TiltCard imageUrl="https://i.picsum.photos/id/300/500/500.jpg"/>
                         </div>
-                        <div className="col d-flex align-items-center justify-content-center">
+                        <div className="col d-flex align-items-center justify-content-center i4">
                             <TiltCard imageUrl="https://i.picsum.photos/id/104/500/500.jpg"/>
                         </div>
                     </div>

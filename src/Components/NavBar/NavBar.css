@@ -1,4 +1,11 @@
+.shadow-down {
+  box-shadow: 0 8px 10px -10px black;
+}
 
+.hide {
+  transform: translateY(-10vh);
+  transition: all 0.6s ease-in-out;
+}
 
 /* for mobile */
 @media only screen and (max-width: 600px) {
@@ -15,6 +22,7 @@
     z-index: 99;
     background-color: black;
     color: rgb(255, 255, 255);
+    transition: all 0.3s linear;
   }
 
   .mobile .row {
