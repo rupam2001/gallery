@@ -7,7 +7,6 @@ import {
     isMobile
 } from "react-device-detect";
 
-import Quote from '../Quote/Quote';
 import './Hero.css';
 
 const Hero = ({ imageUrl }) => {
