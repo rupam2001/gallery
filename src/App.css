@@ -18,3 +18,32 @@ a:visited {
   color: inherit;
   cursor: auto;
 }
+
+
+.loader {
+  text-align: center;
+  color: #999;
+}
+.loader__text {
+  display: block;
+  margin: 10px 0;
+  opacity: 0.5;
+}
+.loader__anim {
+  display: block;
+  width: 195px;
+  height: 4.5px;
+  background: linear-gradient(to right, #861a54, #08a3dc, #b1c200, #e7c001, #ee9a16, #de1317, #861a54, #08a3dc, #b1c200, #e7c001, #ee9a16, #de1317, #861a54);
+  background-size: 200%;
+  z-index: 1;
+  background-position: 0 0;
+  animation: 1s linear 3s infinite normal both rainbow;
+}
+@keyframes rainbow {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}

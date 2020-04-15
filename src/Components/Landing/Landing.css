@@ -10,6 +10,7 @@
 
 .section-vision span {
     line-height: 2rem;
+    font-family: 'Nanum Myeongjo', serif;
 }
 
 .shadow-heading {
@@ -20,6 +21,8 @@
     margin-top: 5vh;
     font-weight: bold;
     font-size: 4.5rem;
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 800;
 }
 
 .shadow-heading .shadow-text {
@@ -107,26 +110,8 @@
         padding-top: 5rem;
         padding-bottom: 3rem;
     }
+    
 }
-
-.section-showcase {
-    position: relative;
-}
-
-.section-showcase::before{
-    content: "";
-  position: absolute;
-  /* height: 100vh;
-  width: 100vw; */
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-image: url(../../img/wall-3.jpg);
-  background-repeat: no-repeat;
-  filter: brightness(1.4) contrast(0.3) blur(1px);
-  z-index: -5;
-} 
 
 /* .section-showcase{
     background-image: url(../../img/wall-3.jpg);

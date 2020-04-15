@@ -83,19 +83,24 @@
 .inner-element h1 {
   z-index: 4;
   margin: 0;
-  text-shadow: 1px 1px 5px #000000;
+  text-shadow: 1px 1px 5px #ffffff;
   transform: translate3d(0,3rem,0);
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   padding: 0 1rem;
-  font-family: "Pacifico", cursive;
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: 800;
+  color: #000000;
+  opacity: 0;
 }
 
 .tilt:hover .inner-element h1 {
   transform: translate3d(0,0,0);
+  opacity: 1;
 }
 
 .inner-element p {
-  text-shadow: 2px 2px 4px #000000;
+  text-shadow: 2px 2px 4px #ffffff;
+  color: #000000;
   z-index: 4;
   margin: 0;
   padding: 0 1rem 1rem 1rem;

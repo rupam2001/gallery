@@ -74,6 +74,14 @@ const Menu = ({ collapse, show }) => {
 
                 </div>
             </div>
+
+            <div className="row  nav-item">
+                <div className="col">
+                    <span className="nav-item">ALL PAINTINGS</span>
+
+                </div>
+            </div>
+
             <div className="row  nav-item">
                 <div className="col">
                     <Link to="/contact">
@@ -89,12 +97,7 @@ const Menu = ({ collapse, show }) => {
                     </Link>
                 </div>
             </div>
-            <div className="row  nav-item">
-                <div className="col">
-                    <span className="nav-item">LOREM</span>
-
-                </div>
-            </div>
+            
         </div>
     )
 }

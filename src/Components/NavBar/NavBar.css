@@ -1,3 +1,4 @@
+
 .shadow-down {
   box-shadow: 0 8px 10px -10px black;
 }
@@ -8,19 +9,18 @@
 }
 
 /* for mobile */
-@media only screen and (max-width: 600px) {
-
+@media only screen and (max-width: 900px) {
   .navBar .browser {
     display: none;
   }
 
-  .navBar .mobile{
+  .navBar .mobile {
     width: 100vw;
     height: 10vh;
     position: fixed;
-    top: 0;  
+    top: 0;
     z-index: 99;
-    background-color: black;
+    background-color: #8f4513;
     color: rgb(255, 255, 255);
     transition: all 0.3s linear;
   }
@@ -37,38 +37,42 @@
   .navBar .mobile {
     display: block;
   }
-  
 }
 
 /* browser */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 900px) {
   .navBar .mobile {
     display: none;
+    
   }
 
   .navBar {
     position: sticky;
-    top: 0;  
+    top: 0;
     z-index: 999;
+    background-color: #8f4513;
+    color: white;
   }
-  .navBar .row{
+  .navBar .row {
     width: 100vw;
     height: 10vh;
+    transition: all 0.7s ease-in-out;
+    background-color: #8f4513;
+    color: white;
   }
   .navBar .browser {
     display: block;
   }
   .navBar .browser {
     font-weight: bold;
-    background-color: rgb(255, 255, 255);
+    background-color: #8f4513;
+    color: white;
   }
-  
+
   .navBar .browser .row {
     height: 10vh;
   }
 }
-
-
 
 /* hamburger menu */
 
@@ -77,7 +81,9 @@
   cursor: pointer;
 }
 
-.bar1, .bar2, .bar3 {
+.bar1,
+.bar2,
+.bar3 {
   width: 30px;
   height: 3px;
   background-color: rgb(255, 255, 255);
@@ -86,24 +92,62 @@
 }
 
 .change .bar1 {
-  transform: rotate(-45deg) translate(-10px,3px);
+  transform: rotate(-45deg) translate(-10px, 3px);
 }
 
-.change .bar2 {opacity: 0;}
+.change .bar2 {
+  opacity: 0;
+}
 
 .change .bar3 {
-  transform: rotate(45deg) translate(-10px,-3px);
+  transform: rotate(45deg) translate(-10px, -3px);
 }
 
 /* animations */
 
- .--hide {
+.--hide {
   animation: cover 1s ease-in-out forwards;
   z-index: -999;
 }
 
 @keyframes cover {
-  from { clip-path: circle(300%);}
-    to {clip-path: circle(0% at 50% -10vh);}
+  from {
+    clip-path: circle(300%);
+  }
+  to {
+    clip-path: circle(0% at 50% -10vh);
+  }
 }
 
+.browser {
+  width: 100vw;
+  position: relative;
+}
+
+.navBar .browser .nitya-logo {
+  position: absolute;
+  left: 1vw;
+  padding: 0 1rem;
+  margin: 0;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 178, 107);
+  color: rgb(0, 0, 0);
+  transition: all 0.7s ease-in-out;
+}
+
+.--logo-hide {
+  transform: scale(0);
+}
+
+.--logo-show {
+  transform: scale(1);
+}
+
+.--move {
+  transform: translateX(5vw) scale(0.85);
+  transition: all 0.7s ease-in-out;
+  background-color: rgba(0, 0, 0, 0) !important;
+}

@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
+import { animateScroll as scroll } from "react-scroll";
 import "./About.css";
 
 const About = () => {
 
     useEffect(() => {
-        window.scrollTo(0, 0);
+        scroll.scrollToTop();
     }, [])
 
     return (
