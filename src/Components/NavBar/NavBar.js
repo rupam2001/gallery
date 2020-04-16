@@ -118,7 +118,7 @@ const NavBar = () => {
                                 to="vision"
                                 spy={true}
                                 smooth={true}
-                                offset={0}
+                                offset={-40}
                                 duration={500}
                             >
                                 <span className="pointer">VISION</span>

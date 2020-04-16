@@ -51,7 +51,7 @@ const Landing = () => {
             <div className="section-vision animated fadeIn" id="vision">
                 <div className="shadow-heading" data-aos="fade-down">
                     <hr style={{ position: 'absolute', zIndex: '-1', width: '90vw', left: '5vw' }} />
-                    <span style={{ backgroundColor: 'white', fontSize: '5vw' }} className="john">ARTIST'S VISSION</span>
+                    <span style={{ backgroundColor: 'rgb(243, 243, 243)', fontSize: '5vw' }} className="john">ARTIST'S VISSION</span>
                     {/* <h1 className="real-text">ARTIST'S VISION</h1>
                     <h1 className='shadow-text'>ARTIST'S VISION</h1> */}
                 </div>
@@ -70,7 +70,7 @@ const Landing = () => {
                     </div>
                 </div>
             </div>
-            <div className="d-flex justify-content-end align-items-center mx-4 motion-toggler" data-aos="fade-left">
+            <div className="d-flex justify-content-end align-items-center mx-4 motion-toggler mt-4" data-aos="fade-left">
                 <span className="mr-2">
                     Hover 3D Animations
                     </span>
@@ -156,4 +156,4 @@ const Landing = () => {
     )
 }
 
-export default Landing
+export default Landing;
