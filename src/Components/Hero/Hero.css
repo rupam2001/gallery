@@ -58,7 +58,7 @@
 .mobile .mName {
   margin-top: 1rem;
   font-weight: normal;
-  font-family: 'Nanum Myeongjo', serif;
+  font-family: 'Dancing Script', cursive;
 }
 
 @media only screen and (max-width: 600px) {

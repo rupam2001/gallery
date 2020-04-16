@@ -12,7 +12,6 @@
     align-items: center;
     font-size: 1.6rem;
     overflow: hidden;
-    /* transition: all 1s linear; */
     animation: reveal 1s ease-in-out forwards;
     padding-bottom: 20vh;
 }

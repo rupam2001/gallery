@@ -34,7 +34,6 @@
   right: 4rem;
   box-shadow: 0 8px 10px -10px black;
   z-index: 9999;
-  /* opacity: 0.6; */
 }
 .preview .inner:hover {
   clip-path: circle(75%);
@@ -77,7 +76,6 @@
   background-color: red;
   color: rgb(255, 255, 255);
 }
-
 
 /* mobile */
 @media only screen and (max-width: 900px) {

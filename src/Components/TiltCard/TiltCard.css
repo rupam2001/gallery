@@ -10,7 +10,8 @@
   background-size: contain;
   background-repeat: no-repeat;
   box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0,
-    inset rgb(0, 0, 0) 0 0 0 5px, inset rgb(0, 0, 0) 0 0 0 10px;
+    inset rgb(0, 0, 0) 0 0 0 5px, inset rgb(0, 0, 0) 0 0 0 10px,
+    inset rgba(0, 0, 0, 0.66) 0 0px 30px 5px;
   position: relative;
   cursor: pointer;
   transition: all 0.5s linear 1s !important;
@@ -18,26 +19,11 @@
 
 .tilt:hover {
   transition: all 0.2s linear !important;
-  /* animation: outlined 0.5s linear forwards; */
   box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0,
       inset rgb(255, 255, 255) 0 0 0 5px, 
       inset #333 0 0 0 10px,
       inset rgba(0, 0, 0, 0.66) 0 20px 40px 0;
 }
-
-/* @keyframes outlined {
-  from {
-    box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0,
-      inset rgba(255, 255, 255, 0.726) 0 0 0 5px, inset #333 0 0 0 10px;
-  }
-  to {
-    box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0,
-      inset rgb(255, 255, 255) 0 0 0 5px, 
-      inset #333 0 0 0 10px,
-      inset rgba(0, 0, 0, 0.66) 0 30px 60px 0;
-  }
-} */
-
 
 .inner-element {
   height: 400px !important;
@@ -49,7 +35,6 @@
   font-size: 35px;
   font-style: italic;
   color: white;
-  /* transform: translateZ(60px); */
   z-index: 1;
   position: relative;
 }
@@ -69,7 +54,7 @@
   width: 385px;
   background: linear-gradient(
     45deg,
-    rgba(224, 149, 44, 1) 0%,
+    rgb(228, 165, 77) 0%,
     rgba(125, 185, 232, 0) 100%
   );
   opacity: 0;

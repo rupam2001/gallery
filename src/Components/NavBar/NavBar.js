@@ -1,10 +1,9 @@
-import React, { useEffect, useState, useLayoutEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link as SmoothLink, animateScroll as scroll } from "react-scroll";
 import { Link } from 'react-router-dom';
 
 import Menu from './Menu/Menu';
 import './NavBar.css';
-import { Li } from 'evergreen-ui';
 
 const NavBar = () => {
 

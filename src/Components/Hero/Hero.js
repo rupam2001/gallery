@@ -1,11 +1,4 @@
-import React, { useEffect } from 'react'
-
-import {
-    BrowserView,
-    MobileView,
-    isBrowser,
-    isMobile
-} from "react-device-detect";
+import React from 'react'
 
 import './Hero.css';
 

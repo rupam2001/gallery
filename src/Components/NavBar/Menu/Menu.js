@@ -1,9 +1,8 @@
-import React, { useEffect, useLocation, useState } from 'react'
+import React, { useEffect } from 'react'
 import { Link as SmoothLink, animateScroll as scroll } from "react-scroll";
 import { Link } from 'react-router-dom';
 
 import './Menu.css';
-import { Li } from 'evergreen-ui';
 
 const Menu = ({ collapse, show }) => {
 

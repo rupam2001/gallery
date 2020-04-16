@@ -4,7 +4,6 @@
 
 .section-vision {
     padding: 10vh 0;
-    height: 100vh;
     background-color: white;
 }
 
@@ -17,7 +16,7 @@
     position: relative;
 }
 
-.shadow-heading h1 {
+.shadow-heading .real-text {
     margin-top: 5vh;
     font-weight: bold;
     font-size: 4.5rem;
@@ -27,16 +26,19 @@
 
 .shadow-heading .shadow-text {
     z-index: -1;
-    text-shadow: 0px -10px 0px rgba(231, 177, 0, 0.336);
+    text-shadow: 0px -10px 0px rgba(209, 209, 209, 0.336);
     width: 100vw;
     position: absolute;
     bottom: -9px;
     font-size: 5rem;
     color: rgba(0, 0, 0, 0);
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 800;
+    user-select: none;
 }
 
-.section-vision .main {
-    height: 60vh;
+.shadow-heading .john {
+    font-family: 'Nanum Myeongjo', serif;
 }
 
 .section-vision .photo {
@@ -46,36 +48,34 @@
 .section-vision .photo * {
     user-select: none;
 }
-/* 
-.section-vision .photo :last-child {
-    position: absolute;
-    bottom: -1rem;
-    right: 0rem;
-    transform: scale(1.1);
-    z-index: -999;
-    filter: blur(10px) grayscale();
-} */
 
 .section-showcase {
     padding: 10vh 0;
 }
 
+.motion-toggler span {
+    color: rgb(197, 197, 197)
+}
+
+/* mobile */
 @media only screen and (max-width: 600px) {
-    /* .section-vision .photo :last-child {
-      display: none;
-    } */
+
+    hr {
+        top: 0.5rem;
+    }
+
     .section-vision .photo-col {
         justify-content: center !important;
     }
     .section-vision {
         padding: 10vh 0;
-        height: 200vh;
+        /* height: 200vh; */
     }
     .section-vision span{
         padding: 0 1rem;
     }
 
-    .shadow-heading h1 {
+    .shadow-heading .real-text {
         font-size: 2.5rem;
     }
 
@@ -91,6 +91,14 @@
 
     .section-showcase .col {
         margin: 2rem 0;
+    }
+
+    .motion-toggler {
+        display: none !important;
+    }
+
+    .motion-toggler * {
+        display: none !important;
     }
     
 }
@@ -112,10 +120,3 @@
     }
     
 }
-
-/* .section-showcase{
-    background-image: url(../../img/wall-3.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-} */

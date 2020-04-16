@@ -9,9 +9,9 @@ import {
 
 import './TiltCard.css';
 
-const TiltCard = ({ imageUrl }) => {
+const TiltCard = ({ imageUrl, motion }) => {
 
-    const [tiltEnable, settiltEnable] = useState(true);
+    const [tiltEnable, settiltEnable] = useState(false);
     const [glarePosition, setglarePosition] = useState("all")
 
     useEffect(() => {
@@ -21,20 +21,24 @@ const TiltCard = ({ imageUrl }) => {
         }
     }, []);
 
+    useEffect(() => {
+        settiltEnable(motion)
+    },[motion])
+
     return (
         <React.Fragment>
             <BrowserView>
                 <Tilt
                     className="tilt parallax-effect-glare-scale"
-                    // perspective={900}
+                    // perspective={3000}
                     tiltEnable={tiltEnable}
                     glareEnable={tiltEnable}
-                    glareMaxOpacity={0.5}
+                    glareMaxOpacity={0}
                     glarePosition={glarePosition}
                     // scale={1.02}
                     tiltReverse={true}
-                    tiltMaxAngleX={('Max tilt - x axis', 15)}
-                    tiltMaxAngleY={('Max tilt - y axis', 15)}
+                    tiltMaxAngleX={('Max tilt - x axis', 5)}
+                    tiltMaxAngleY={('Max tilt - y axis', 5)}
                     transitionSpeed={10000}
                     style={{ backgroundColor: 'white' }}
                 >

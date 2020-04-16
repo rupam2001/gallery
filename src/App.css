@@ -47,3 +47,17 @@ a:visited {
     background-position: 100% 0;
   }
 }
+
+
+hr {
+  display: block;
+  padding: 0;
+  margin: 8px auto;
+  height: 0;
+  max-height: 0;
+  font-size: 1px;
+  line-height: 0;
+  clear: both;
+  border: none;
+  border-top: 1px solid #cacaca;
+}
