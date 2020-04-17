@@ -114,6 +114,14 @@
     .motion-toggler * {
         display: none !important;
     }
+
+    /* .section-slideshow {
+        height: 100vh;
+    } */
+
+    /* .section-slideshow img {
+        height: 80vh;
+    } */
     
 }
 

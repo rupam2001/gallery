@@ -119,7 +119,7 @@ const NavBar = () => {
                                 spy={true}
                                 smooth={true}
                                 offset={-40}
-                                duration={500}
+                                duration={1000}
                             >
                                 <span className="pointer">VISION</span>
                             </SmoothLink>
@@ -134,8 +134,8 @@ const NavBar = () => {
                                 to="my-work"
                                 spy={true}
                                 smooth={true}
-                                offset={0}
-                                duration={500}
+                                offset={-40}
+                                duration={1000}
                             >
                                 <span className="pointer">MY WORK</span>
                             </SmoothLink>

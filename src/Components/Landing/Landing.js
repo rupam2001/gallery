@@ -15,6 +15,20 @@ const Landing = () => {
   const [previewUrl, setpreviewUrl] = useState("");
   const [AOSDelay, setAOSDelay] = useState(250);
   const [motionToggler, setmotionToggler] = useState(false);
+  const [slideshowImage, setslideshowImage] = useState([])
+
+  const slideshowImageList = [
+    [
+      "https://picsum.photos/id/101/1080/1920",
+      "https://picsum.photos/id/200/1080/1920",
+      "https://picsum.photos/id/103/1080/1920"
+    ],
+    [
+      "https://picsum.photos/id/101/1920/1080",
+      "https://picsum.photos/id/200/1920/1080",
+      "https://picsum.photos/id/103/1920/1080"
+    ]
+  ]
 
   const preview = (url) => {
     setpreviewUrl(url + `/800/500.jpg`);
@@ -33,6 +47,9 @@ const Landing = () => {
     });
     if (isMobile) {
       setAOSDelay(0);
+      setslideshowImage(slideshowImageList[0]);
+    } else {
+      setslideshowImage(slideshowImageList[1]);
     }
   }, []);
 
@@ -95,11 +112,10 @@ const Landing = () => {
         </div>
       </div>
 
-
       <div className="section-slideshow container d-flex justify-content-center align-items-center my-4 py-4">
         <div className="row">
           <div className="col" data-aos="zoom-in">
-            <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+            <div id="carouselExampleIndicators" className="carousel slide shadow" data-ride="carousel">
               <ol className="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to={0} className="active" />
                 <li data-target="#carouselExampleIndicators" data-slide-to={1} />
@@ -107,22 +123,22 @@ const Landing = () => {
               </ol>
               <div className="carousel-inner">
                 <div className="carousel-item active">
-                  <img className="d-block w-100" src="https://picsum.photos/id/101/1920/1080" alt="First slide" />
-                  <div className="carousel-caption d-none d-md-block">
+                  <img className="d-block w-100" src={slideshowImage[0]} alt="First slide" />
+                  <div className="carousel-caption">
                     <h1>Caption</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus non eligendi a dignissimos ut animi. Dolorum similique</p>
                   </div>
                 </div>
                 <div className="carousel-item">
-                  <img className="d-block w-100" src="https://picsum.photos/id/200/1920/1080" alt="Second slide" />
-                  <div className="carousel-caption d-none d-md-block">
+                  <img className="d-block w-100" src={slideshowImage[1]} alt="Second slide" />
+                  <div className="carousel-caption">
                     <h1>Caption</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus non eligendi a dignissimos ut animi. Dolorum similique</p>
                   </div>
                 </div>
                 <div className="carousel-item">
-                  <img className="d-block w-100" src="https://picsum.photos/id/103/1920/1080" alt="Third slide" />
-                  <div className="carousel-caption d-none d-md-block">
+                  <img className="d-block w-100" src={slideshowImage[2]} alt="Third slide" />
+                  <div className="carousel-caption">
                     <h1>Caption</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus non eligendi a dignissimos ut animi. Dolorum similique</p>
                   </div>

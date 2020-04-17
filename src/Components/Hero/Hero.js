@@ -14,7 +14,7 @@ const Hero = ({ imageUrl }) => {
                 <div className="mobile">
                     <h1 className="mQuote fadeInUp delay-2s">
                         <span className="start">"</span>
-                        Its not about <br />skills, its about <br />thoughts.
+                        Its not about <br />skills, its about <br />thoughts
                         <span className="end">"</span>
                     </h1>
                     <div className="text-center">
