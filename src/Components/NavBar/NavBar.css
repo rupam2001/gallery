@@ -32,6 +32,8 @@
 
   .navBar .logo {
     margin: 0;
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 800;
   }
 
   .navBar .mobile {
