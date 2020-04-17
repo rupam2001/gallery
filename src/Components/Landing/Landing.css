@@ -50,6 +50,19 @@
     user-select: none;
 }
 
+/* .section-slideshow {
+    height: 100vh;
+}
+
+.section-slideshow img {
+    height: 80vh;
+    width: auto;
+}
+
+.section-slideshow .row {
+    width: 90vw;
+} */
+
 .section-showcase {
     padding: 10vh 0;
 }
@@ -120,4 +133,11 @@
         padding-bottom: 3rem;
     }
     
+}
+
+.carousel-caption {
+    background-color: rgba(255, 255, 255, 0.589) !important;
+    color: black !important;
+    font-family: 'Nanum Myeongjo', serif;
+    margin-bottom: 2rem;
 }

@@ -24,7 +24,7 @@ const Header = () => {
                         <h1>NITYA SONI</h1>
                     </div>
                     <div className="col-3 text-right d-flex align-items-end justify-content-end">
-                        example@example.com
+                        nityasoni108@gmail.com
                    </div>
                 </div>
             </div>
