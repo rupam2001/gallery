@@ -17,6 +17,10 @@ app.get("/", (req, res) => {
 const chat = require("./routes/chat");
 app.use("/chat", chat);
 
+//notification
+const notification = require("./routes/notification");
+app.use("/notify", notification);
+
 //connect to Db
 //mongoose.connect(
 //  process.env.DB_CONNECTION,
