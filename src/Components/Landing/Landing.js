@@ -115,7 +115,7 @@ const Landing = () => {
       <div className="section-slideshow container d-flex justify-content-center align-items-center my-4 py-4">
         <div className="row">
           <div className="col" data-aos="zoom-in">
-            <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+            <div id="carouselExampleIndicators" className="carousel slide shadow" data-ride="carousel">
               <ol className="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to={0} className="active" />
                 <li data-target="#carouselExampleIndicators" data-slide-to={1} />
